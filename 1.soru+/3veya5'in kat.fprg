@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Krivatz"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-21 05:53:33 &#214;S"/>
+        <attribute name="created" value="S3JpdmF0ejtLUklWQVRaLVJGSzE4MkI7MjAyMi0xMC0xOTsxMToyMzo1MCDDllM7MzIwOA=="/>
+        <attribute name="edited" value="S3JpdmF0ejtLUklWQVRaLVJGSzE4MkI7MjAyMi0xMC0yMTswNTo1MzozMyDDllM7NjszMzIx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="d" type="Integer" array="False" size=""/>
+            <assign variable="d" expression="0"/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <for variable="c" start="1" end="999" direction="inc" step="1">
+                <if expression="c%3==0">
+                    <then>
+                        <output expression="&quot;de&#287;er 3'e b&#246;l&#252;n&#252;yor: &quot;&amp;c" newline="True"/>
+                        <assign variable="d" expression="d+c"/>
+                    </then>
+                    <else>
+                        <if expression="c%5==0">
+                            <then>
+                                <output expression="&quot;de&#287;er 5'e b&#246;l&#252;n&#252;yor: &quot;&amp;c" newline="True"/>
+                                <assign variable="d" expression="d+c"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="d" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

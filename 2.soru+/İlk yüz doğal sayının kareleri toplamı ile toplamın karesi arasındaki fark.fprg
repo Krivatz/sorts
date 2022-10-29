@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Krivatz"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-21 12:15:04 &#214;&#214;"/>
+        <attribute name="created" value="S3JpdmF0ejtLUklWQVRaLVJGSzE4MkI7MjAyMi0xMC0yMTsxMjowNDozNiDDlsOWOzMzMzY="/>
+        <attribute name="edited" value="S3JpdmF0ejtLUklWQVRaLVJGSzE4MkI7MjAyMi0xMC0yMTsxMjoxNTowNCDDlsOWOzE7MzQ0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="KareleriToplam&#305;, Toplam&#305;nKaresi, i, j" type="Integer" array="False" size=""/>
+            <assign variable="Toplam&#305;nKaresi" expression="0"/>
+            <assign variable="KareleriToplam&#305;" expression="0"/>
+            <for variable="i" start="1" end="100" direction="inc" step="1">
+                <assign variable="KareleriToplam&#305;" expression="KareleriToplam&#305;+i*i"/>
+                <assign variable="Toplam&#305;nKaresi" expression="Toplam&#305;nKaresi+i"/>
+            </for>
+            <output expression="&quot;KareleriToplam&#305;: &quot;&amp;KareleriToplam&#305;" newline="True"/>
+            <output expression="&quot;Toplam&#305;nKaresi: &quot;&amp;Toplam&#305;nKaresi" newline="True"/>
+            <output expression="&quot;&#304;lk y&#252;z do&#287;al say&#305;n&#305;n kareleri toplam&#305; ile toplam&#305;n karesi aras&#305;ndaki fark: &quot;&amp;KareleriToplam&#305;-Toplam&#305;nKaresi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
