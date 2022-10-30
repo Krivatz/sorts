@@ -3,7 +3,7 @@ int z ;
 int v = 0;
 int kalan(int z){
 	
-	for(int i = 1;i<=z;i++){
+	for(int i = 1;i<z;i++){
 	
 		if(i%3==0)
 		{
