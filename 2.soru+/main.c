@@ -9,6 +9,7 @@ int toplam(int i){
     	
 		ToplaminKaresi=ToplaminKaresi +i;
     }
+    ToplaminKaresi=ToplaminKaresi*ToplaminKaresi;
 return KareleriToplami,ToplaminKaresi;
 }
 int main()
