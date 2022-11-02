@@ -14,12 +14,12 @@ int i, key, j;
     for (i = 1; i < n; i++) {
         key = dizi[i];
         j = i - 1;
+        dizi[j + 1] = key;
  
         while (j >= 0 && dizi[j] > key) {
             dizi[j + 1] = dizi[j];
             j = j - 1;
         }
-        dizi[j + 1] = key;
     }
     
 //doğru sıralanışın basıldığı döndü

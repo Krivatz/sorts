@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Krivatz"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-02 01:26:54 &#214;S"/>
+        <attribute name="created" value="S3JpdmF0ejtLUklWQVRaLVJGSzE4MkI7MjAyMi0xMS0wMjswMTowMzoyMCDDllM7MzE5NQ=="/>
+        <attribute name="edited" value="S3JpdmF0ejtLUklWQVRaLVJGSzE4MkI7MjAyMi0xMS0wMjswMToyNjo1NCDDllM7MTszMzE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="bubble"/>
+        </body>
+    </function>
+    <function name="bubble" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, z, v" type="Integer" array="False" size=""/>
+            <input variable="z"/>
+            <declare name="sayilar" type="Integer" array="True" size="z"/>
+            <assign variable="z" expression="z-1"/>
+            <for variable="i" start="0" end="z" direction="inc" step="1">
+                <assign variable="sayilar[i]" expression="random(10000)"/>
+                <output expression="sayilar[i]" newline="True"/>
+            </for>
+            <for variable="i" start="1" end="z" direction="inc" step="1">
+                <for variable="j" start="0" end="z-i" direction="inc" step="1">
+                    <if expression="sayilar[j]&gt;sayilar[j+1]">
+                        <then>
+                            <declare name="a" type="Integer" array="False" size=""/>
+                            <assign variable="a" expression="sayilar[j]"/>
+                            <assign variable="sayilar[j]" expression="sayilar[j+1]"/>
+                            <assign variable="sayilar[j+1]" expression="a"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Do&#287;ru s&#305;ralan&#305;&#351;&quot;" newline="True"/>
+            <for variable="i" start="0" end="z" direction="inc" step="1">
+                <output expression="sayilar[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

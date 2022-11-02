@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Krivatz"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-02 01:03:03 &#214;S"/>
+        <attribute name="created" value="S3JpdmF0ejtLUklWQVRaLVJGSzE4MkI7MjAyMi0xMS0wMjsxMjozNDoyMSDDllM7MzIwMg=="/>
+        <attribute name="edited" value="S3JpdmF0ejtLUklWQVRaLVJGSzE4MkI7MjAyMi0xMS0wMjswMTowMzowMyDDllM7MTszMzA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="selection"/>
+        </body>
+    </function>
+    <function name="selection" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, position, swap" type="Integer" array="False" size=""/>
+            <input variable="c"/>
+            <declare name="sayilar" type="Integer" array="True" size="c"/>
+            <assign variable="c" expression="c-1"/>
+            <for variable="a" start="0" end="c" direction="inc" step="1">
+                <assign variable="sayilar[a]" expression="random(10000)"/>
+                <output expression="sayilar[a]" newline="True"/>
+            </for>
+            <for variable="a" start="0" end="c-1" direction="inc" step="1">
+                <assign variable="position" expression="a"/>
+                <for variable="b" start="a+1" end="c" direction="inc" step="1">
+                    <if expression="sayilar[position]&gt; sayilar[b]">
+                        <then>
+                            <assign variable="position" expression="b"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="position!=a">
+                        <then>
+                            <assign variable="swap" expression="sayilar[a]"/>
+                            <assign variable="sayilar[a]" expression="sayilar[position]"/>
+                            <assign variable="sayilar[position]" expression="swap"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Do&#287;ru s&#305;ralan&#305;&#351;&#305;&quot;" newline="True"/>
+            <for variable="a" start="0" end="c" direction="inc" step="1">
+                <output expression="sayilar[a]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

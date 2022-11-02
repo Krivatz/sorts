@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int  a, b, c, position, swap;
 
@@ -9,7 +10,7 @@ selectionsort(int c){
 		int sayilar[c];
 	
 		for(a= 0; a<c ;a++){
-        
+       
 		sayilar[a]=rand()%10000;
         
 		printf("%d  ", sayilar[a]);
